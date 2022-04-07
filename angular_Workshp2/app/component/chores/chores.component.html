@@ -1,0 +1,30 @@
+<main text-align="top" [ngStyle]="{'color': 'orange'}" >
+   <u><h2>Yesterday's chores</h2></u> 
+  <ol class="Chore">
+    <li  *ngFor="let chores of ch">
+      {{chores.desc}}
+    </li>
+    <p *ngIf="ch.length > ch1.length" [ngStyle]="{'font-size': '50px', 'color': 'black'}"><i>Good Work!!!</i></p>
+  </ol>
+  
+  <hr>
+  
+    <u><h2>Today's chores</h2></u> 
+   <ol class="tChore">
+     <li  *ngFor="let chores of ch1">
+       {{chores.desc}}
+     </li>
+     <p *ngIf="ch1.length < ch2.length" [ngStyle]="{'font-size': '50px', 'color': 'black'}"><i>Work hard!!</i></p>
+   </ol>
+   
+<hr>
+   
+    <u><h2>Tomorrow's chores</h2></u> 
+
+   <ol class="tmChore">
+     <li  *ngFor="let chores of ch2">
+       {{chores.desc}}
+     </li>
+   </ol>
+  
+  </main>
